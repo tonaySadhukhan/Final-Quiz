@@ -15,10 +15,7 @@ const sendMail=require('./mail');
 const authToken=require('./auth');
 const SECRET_KEY=process.env.SECRET_KEY;
 // ✅ CORS
-app.use(cors({
-  origin: 'http://127.0.0.1:5500',
-  credentials: true
-}));
+app.use(cors());
 
 function generateToken(user){
     console.log(user.id,user.email);
