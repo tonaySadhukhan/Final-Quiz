@@ -348,6 +348,6 @@ app.post('/login', async (req, res) => {
 //   res.send("Cookie has been set");
 // });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server started on http://localhost:3000");
 });
