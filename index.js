@@ -143,7 +143,7 @@ app.post('/setquiz',authToken, async (req, res) => {
   }
 });
 
-app.get('/getquiz',authToken, async (req, res) => {
+app.get('/getquiz', async (req, res) => {
   const par = req.query.id;
   try {
     const response = await Quizes.findById(par);
@@ -205,7 +205,7 @@ app.delete('/deletquiz', authToken,async (req, res) => {
   }
 });
 
-app.put('/updateImpression', authToken,async (req, res) => {
+app.put('/updateImpression', async (req, res) => {
   const id = req.query.id;
   try {
     const { impressions, rating } = req.body;
@@ -227,7 +227,7 @@ app.put('/updateImpression', authToken,async (req, res) => {
   }
 });
 
-app.put('/update-question', authToken,async (req, res) => {
+app.put('/update-question', async (req, res) => {
   const { quizId, questionId } = req.query;
   const { impressions, right } = req.body;
 
